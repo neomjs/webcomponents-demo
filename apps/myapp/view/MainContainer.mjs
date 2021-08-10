@@ -21,10 +21,15 @@ class MainContainer extends Viewport {
             items: [{
                 ntype : 'container',
                 layout: {ntype: 'vbox', align: 'start'},
-                style : {margin: '20px'},
+                style : {margin: '1em'},
 
                 items: [{
-                    module: MwcButton
+                    module: MwcButton,
+                    label : 'standard'
+                }, {
+                    module: MwcButton,
+                    label : 'outlined',
+                    style : {marginTop: '1em'}
                 }],
 
                 tabButtonConfig: {
