@@ -8,7 +8,7 @@ class MwcButton extends Component {
     static getConfig() {return {
         className: 'MyApp.view.MwcButton',
         _vdom:
-        {tag: 'mwc-button'}
+        {tag: 'mwc-button', label: 'Hello World'}
     }}
 }
 

@@ -1,4 +1,5 @@
 import Component    from '../../../node_modules/neo.mjs/src/component/Base.mjs';
+import MwcButton    from './MwcButton.mjs';
 import TabContainer from '../../../node_modules/neo.mjs/src/tab/Container.mjs';
 import Viewport     from '../../../node_modules/neo.mjs/src/container/Viewport.mjs';
 
@@ -18,24 +19,20 @@ class MainContainer extends Viewport {
             width : 500,
             style : {flex: 'none', margin: '20px'},
 
-            itemDefaults: {
-                module: Component,
-                cls   : ['neo-examples-tab-component'],
-                style : {padding: '20px'},
-            },
-
             items: [{
+                module: MwcButton,
+
                 tabButtonConfig: {
                     iconCls: 'fa fa-home',
                     text   : 'Tab 1'
-                },
-                vdom: {innerHTML: 'Welcome to your new Neo App.'}
+                }
             }, {
+                module: MwcButton,
+
                 tabButtonConfig: {
                     iconCls: 'fa fa-play-circle',
                     text   : 'Tab 2'
-                },
-                vdom: {innerHTML: 'Have fun creating something awesome!'}
+                }
             }]
         }]
     }}
