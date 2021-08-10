@@ -21,10 +21,14 @@ class Button extends Component {
          */
         label_: null,
         /**
-         * @member {Object} _vdom
+         * @member {Boolean} outlined_=false
+         */
+        outlined_: false,
+        /**
+         * @member {Object} _vdom={tag:'mwc-button'}
          */
         _vdom:
-        {tag: 'mwc-button', label: 'Hello World'}
+        {tag: 'mwc-button'}
     }}
 
     /**
@@ -40,6 +44,24 @@ class Button extends Component {
             vdom.label = value;
         } else {
             delete vdom.label;
+        }
+
+        this.vdom = vdom;
+    }
+
+    /**
+     * Triggered after the outlined config got changed.
+     * @param {Boolean} value
+     * @param {Boolean} oldValue
+     * @protected
+     */
+    afterSetOutlined(value, oldValue) {
+        let vdom = this.vdom;
+
+        if (value) {
+            vdom.outlined = value;
+        } else {
+            delete vdom.outlined;
         }
 
         this.vdom = vdom;

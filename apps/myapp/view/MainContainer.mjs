@@ -27,9 +27,10 @@ class MainContainer extends Viewport {
                     module: MwcButton,
                     label : 'standard'
                 }, {
-                    module: MwcButton,
-                    label : 'outlined',
-                    style : {marginTop: '1em'}
+                    module  : MwcButton,
+                    label   : 'outlined',
+                    outlined: true,
+                    style   : {marginTop: '1em'}
                 }],
 
                 tabButtonConfig: {
