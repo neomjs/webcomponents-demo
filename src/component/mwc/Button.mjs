@@ -38,15 +38,8 @@ class Button extends Component {
      * @protected
      */
     afterSetLabel(value, oldValue) {
-        let vdom = this.vdom;
-
-        if (value) {
-            vdom.label = value;
-        } else {
-            delete vdom.label;
-        }
-
-        this.vdom = vdom;
+        this.vdom.label = value;
+        this.promiseVdomUpdate();
     }
 
     /**
@@ -56,15 +49,8 @@ class Button extends Component {
      * @protected
      */
     afterSetOutlined(value, oldValue) {
-        let vdom = this.vdom;
-
-        if (value) {
-            vdom.outlined = value;
-        } else {
-            delete vdom.outlined;
-        }
-
-        this.vdom = vdom;
+        this.vdom.outlined = value || null;
+        this.promiseVdomUpdate();
     }
 }
 
