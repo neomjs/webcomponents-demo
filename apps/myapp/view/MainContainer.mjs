@@ -36,6 +36,11 @@ class MainContainer extends Viewport {
                     label : 'raised',
                     raised: true,
                     style : {marginTop: '1em'}
+                }, {
+                    module    : MwcButton,
+                    label     : 'unelevated',
+                    style     : {marginTop: '1em'},
+                    unelevated: true
                 }],
 
                 tabButtonConfig: {

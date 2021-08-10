@@ -29,6 +29,10 @@ class Button extends Component {
          */
         raised_: false,
         /**
+         * @member {Boolean} unelevated_=false
+         */
+        unelevated_: false,
+        /**
          * @member {Object} _vdom={tag:'mwc-button'}
          */
         _vdom:
@@ -65,6 +69,17 @@ class Button extends Component {
      */
     afterSetRaised(value, oldValue) {
         this.vdom.raised = value || null;
+        this.promiseVdomUpdate();
+    }
+
+    /**
+     * Triggered after the unelevated config got changed.
+     * @param {Boolean} value
+     * @param {Boolean} oldValue
+     * @protected
+     */
+    afterSetUnelevated(value, oldValue) {
+        this.vdom.unelevated = value || null;
         this.promiseVdomUpdate();
     }
 }
