@@ -1,17 +1,17 @@
 import Component from '../../../node_modules/neo.mjs/src/component/Base.mjs';
 
 /**
- * @class MyApp.view.MwcButton
+ * @class Neo.component.mwc.Button
  * @extends Neo.component.Base
  */
-class MwcButton extends Component {
+class Button extends Component {
     static getConfig() {return {
-        className: 'MyApp.view.MwcButton',
+        className: 'Neo.component.mwc.Button',
         _vdom:
         {tag: 'mwc-button', label: 'Hello World'}
     }}
 }
 
-Neo.applyClassConfig(MwcButton);
+Neo.applyClassConfig(Button);
 
-export {MwcButton as default};
+export {Button as default};

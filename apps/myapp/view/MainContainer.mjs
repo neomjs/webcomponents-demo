@@ -1,4 +1,4 @@
-import MwcButton    from './MwcButton.mjs';
+import MwcButton    from '../../../src/component/mwc/Button.mjs';
 import TabContainer from '../../../node_modules/neo.mjs/src/tab/Container.mjs';
 import Viewport     from '../../../node_modules/neo.mjs/src/container/Viewport.mjs';
 
