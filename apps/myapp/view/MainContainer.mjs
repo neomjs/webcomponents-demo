@@ -23,29 +23,26 @@ class MainContainer extends Viewport {
                 layout: {ntype: 'vbox', align: 'start'},
                 style : {margin: '1em'},
 
-                items: [{
+                itemDefaults: {
                     module: MwcButton,
-                    label : 'standard'
-                }, {
-                    module  : MwcButton,
-                    label   : 'outlined',
-                    outlined: true,
-                    style   : {marginTop: '1em'}
-                }, {
-                    module: MwcButton,
-                    label : 'raised',
-                    raised: true,
                     style : {marginTop: '1em'}
+                },
+
+                items: [{
+                    label: 'standard',
+                    style: null
                 }, {
-                    module    : MwcButton,
+                    label   : 'outlined',
+                    outlined: true
+                }, {
+                    label : 'raised',
+                    raised: true
+                }, {
                     label     : 'unelevated',
-                    style     : {marginTop: '1em'},
                     unelevated: true
                 }, {
-                    module: MwcButton,
-                    dense : true,
-                    label : 'dense',
-                    style : {marginTop: '1em'}
+                    dense: true,
+                    label: 'dense'
                 }],
 
                 tabButtonConfig: {
@@ -58,32 +55,26 @@ class MainContainer extends Viewport {
                 style : {margin: '1em'},
 
                 itemDefaults: {
-                    icon: 'code'
+                    module: MwcButton,
+                    icon  : 'code',
+                    style : {marginTop: '1em'}
                 },
 
                 items: [{
-                    module: MwcButton,
-                    label : 'standard'
+                    label: 'standard',
+                    style: null
                 }, {
-                    module  : MwcButton,
                     label   : 'outlined',
-                    outlined: true,
-                    style   : {marginTop: '1em'}
+                    outlined: true
                 }, {
-                    module: MwcButton,
                     label : 'raised',
-                    raised: true,
-                    style : {marginTop: '1em'}
+                    raised: true
                 }, {
-                    module    : MwcButton,
                     label     : 'unelevated',
-                    style     : {marginTop: '1em'},
                     unelevated: true
                 }, {
-                    module: MwcButton,
-                    dense : true,
-                    label : 'dense',
-                    style : {marginTop: '1em'}
+                    dense: true,
+                    label: 'dense'
                 }],
 
                 tabButtonConfig: {
