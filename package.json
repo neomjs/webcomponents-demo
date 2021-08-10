@@ -1,7 +1,10 @@
 {
-    "name": "myapp",
-    "version": "0.1.0",
-    "private": true,
+    "name": "neo-webcomponents-demo",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/neomjs/webcomponents-demo.git"
+    },
     "scripts": {
         "build-all": "node ./node_modules/neo.mjs/buildScripts/buildAll.js -n",
         "build-all-questions": "node ./buildScripts/buildAll.js",
@@ -14,6 +17,8 @@
         "server-start": "webpack serve -c ./node_modules/neo.mjs/buildScripts/webpack/webpack.server.config.js --open",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
+    "author": "Tobias Uhlig",
+    "license": "MIT",
     "dependencies": {
         "fs-extra": "^10.0.0",
         "neo.mjs": "^2.3.2"
