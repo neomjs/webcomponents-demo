@@ -14,8 +14,8 @@ class MainContainer extends Viewport {
 
         items: [{
             module: TabContainer,
-            height: 300,
-            width : 500,
+            height: 400,
+            width : 600,
             style : {flex: 'none', margin: '20px'},
 
             items: [{
@@ -41,6 +41,11 @@ class MainContainer extends Viewport {
                     label     : 'unelevated',
                     style     : {marginTop: '1em'},
                     unelevated: true
+                }, {
+                    module: MwcButton,
+                    dense : true,
+                    label : 'dense',
+                    style : {marginTop: '1em'}
                 }],
 
                 tabButtonConfig: {
@@ -48,7 +53,38 @@ class MainContainer extends Viewport {
                     text   : 'Tab 1'
                 }
             }, {
-                module: MwcButton,
+                ntype : 'container',
+                layout: {ntype: 'vbox', align: 'start'},
+                style : {margin: '1em'},
+
+                itemDefaults: {
+                    icon: 'code'
+                },
+
+                items: [{
+                    module: MwcButton,
+                    label : 'standard'
+                }, {
+                    module  : MwcButton,
+                    label   : 'outlined',
+                    outlined: true,
+                    style   : {marginTop: '1em'}
+                }, {
+                    module: MwcButton,
+                    label : 'raised',
+                    raised: true,
+                    style : {marginTop: '1em'}
+                }, {
+                    module    : MwcButton,
+                    label     : 'unelevated',
+                    style     : {marginTop: '1em'},
+                    unelevated: true
+                }, {
+                    module: MwcButton,
+                    dense : true,
+                    label : 'dense',
+                    style : {marginTop: '1em'}
+                }],
 
                 tabButtonConfig: {
                     iconCls: 'fa fa-play-circle',

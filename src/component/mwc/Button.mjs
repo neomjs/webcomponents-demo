@@ -17,9 +17,17 @@ class Button extends Component {
          */
         ntype: 'mwc-button',
         /**
-         * @member {String|null} label_=null
+         * @member {Boolean} dense_=false
          */
-        label_: null,
+        dense_: false,
+        /**
+         * @member {String} icon_=''
+         */
+        icon_: '',
+        /**
+         * @member {String} label_=''
+         */
+        label_: '',
         /**
          * @member {Boolean} outlined_=false
          */
@@ -40,9 +48,31 @@ class Button extends Component {
     }}
 
     /**
+     * Triggered after the dense config got changed.
+     * @param {Boolean} value
+     * @param {Boolean} oldValue
+     * @protected
+     */
+    afterSetDense(value, oldValue) {
+        this.vdom.dense = value;
+        this.promiseVdomUpdate();
+    }
+
+    /**
+     * Triggered after the icon config got changed.
+     * @param {String} value
+     * @param {String} oldValue
+     * @protected
+     */
+    afterSetIcon(value, oldValue) {
+        this.vdom.icon = value;
+        this.promiseVdomUpdate();
+    }
+
+    /**
      * Triggered after the label config got changed.
-     * @param {String|null} value
-     * @param {String|null} oldValue
+     * @param {String} value
+     * @param {String} oldValue
      * @protected
      */
     afterSetLabel(value, oldValue) {
