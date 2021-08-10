@@ -24,8 +24,9 @@ class MainContainer extends Viewport {
                 style : {margin: '1em'},
 
                 itemDefaults: {
-                    module: MwcButton,
-                    style : {marginTop: '1em'}
+                    module : MwcButton,
+                    handler: data => console.log('click', data.component.id),
+                    style  : {marginTop: '1em'}
                 },
 
                 items: [{
@@ -55,9 +56,10 @@ class MainContainer extends Viewport {
                 style : {margin: '1em'},
 
                 itemDefaults: {
-                    module: MwcButton,
-                    icon  : 'code',
-                    style : {marginTop: '1em'}
+                    module : MwcButton,
+                    handler: data => console.log('click', data.component.id),
+                    icon   : 'code',
+                    style  : {marginTop: '1em'}
                 },
 
                 items: [{

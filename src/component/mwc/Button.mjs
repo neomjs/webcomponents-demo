@@ -21,6 +21,12 @@ class Button extends Component {
          */
         dense_: false,
         /**
+         * Shortcut for domListeners={click:handler}
+         * A string based value assumes that the handlerFn lives inside a ComponentController
+         * @member {Function|String|null} handler_=null
+         */
+        handler_: null,
+        /**
          * @member {String} icon_=''
          */
         icon_: '',
@@ -56,6 +62,22 @@ class Button extends Component {
     afterSetDense(value, oldValue) {
         this.vdom.dense = value;
         this.promiseVdomUpdate();
+    }
+
+    /**
+     * Triggered after the handler config got changed
+     * @param {String} value
+     * @param {String} oldValue
+     * @protected
+     */
+    afterSetHandler(value, oldValue) {
+        if (value) {
+            let me           = this,
+                domListeners = me.domListeners;
+
+            domListeners.push({click: value, scope: me});
+            me.domListeners = domListeners;
+        }
     }
 
     /**
