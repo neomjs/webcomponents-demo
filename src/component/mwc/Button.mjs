@@ -25,6 +25,10 @@ class Button extends Component {
          */
         outlined_: false,
         /**
+         * @member {Boolean} raised_=false
+         */
+        raised_: false,
+        /**
          * @member {Object} _vdom={tag:'mwc-button'}
          */
         _vdom:
@@ -50,6 +54,17 @@ class Button extends Component {
      */
     afterSetOutlined(value, oldValue) {
         this.vdom.outlined = value || null;
+        this.promiseVdomUpdate();
+    }
+
+    /**
+     * Triggered after the raised config got changed.
+     * @param {Boolean} value
+     * @param {Boolean} oldValue
+     * @protected
+     */
+    afterSetRaised(value, oldValue) {
+        this.vdom.raised = value || null;
         this.promiseVdomUpdate();
     }
 }
