@@ -60,8 +60,7 @@ class Button extends Component {
      * @protected
      */
     afterSetDense(value, oldValue) {
-        this.vdom.dense = value;
-        this.promiseVdomUpdate();
+        this.changeVdomRootKey('dense', value);
     }
 
     /**
@@ -87,8 +86,7 @@ class Button extends Component {
      * @protected
      */
     afterSetIcon(value, oldValue) {
-        this.vdom.icon = value;
-        this.promiseVdomUpdate();
+        this.changeVdomRootKey('icon', value);
     }
 
     /**
@@ -98,8 +96,7 @@ class Button extends Component {
      * @protected
      */
     afterSetLabel(value, oldValue) {
-        this.vdom.label = value;
-        this.promiseVdomUpdate();
+        this.changeVdomRootKey('label', value);
     }
 
     /**
@@ -109,8 +106,7 @@ class Button extends Component {
      * @protected
      */
     afterSetOutlined(value, oldValue) {
-        this.vdom.outlined = value || null;
-        this.promiseVdomUpdate();
+        this.changeVdomRootKey('outlined', value || null);
     }
 
     /**
@@ -120,8 +116,7 @@ class Button extends Component {
      * @protected
      */
     afterSetRaised(value, oldValue) {
-        this.vdom.raised = value || null;
-        this.promiseVdomUpdate();
+        this.changeVdomRootKey('raised', value || null);
     }
 
     /**
@@ -131,8 +126,7 @@ class Button extends Component {
      * @protected
      */
     afterSetUnelevated(value, oldValue) {
-        this.vdom.unelevated = value || null;
-        this.promiseVdomUpdate();
+        this.changeVdomRootKey('unelevated', value || null);
     }
 }
 
