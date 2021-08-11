@@ -17,9 +17,18 @@ class Button extends Component {
          */
         ntype: 'mwc-textfield',
         /**
+         * Displays a helper text below the field
+         * @member {String} helper_=''
+         */
+        helper_: '',
+        /**
          * @member {String} icon_=''
          */
         icon_: '',
+        /**
+         * @member {String} iconTrailing_=''
+         */
+        iconTrailing_: '',
         /**
          * @member {String} label_=''
          */
@@ -32,6 +41,16 @@ class Button extends Component {
     }}
 
     /**
+     * Triggered after the helper config got changed.
+     * @param {String} value
+     * @param {String} oldValue
+     * @protected
+     */
+    afterSetHelper(value, oldValue) {
+        this.changeVdomRootKey('helper', value);
+    }
+
+    /**
      * Triggered after the icon config got changed.
      * @param {String} value
      * @param {String} oldValue
@@ -39,6 +58,16 @@ class Button extends Component {
      */
     afterSetIcon(value, oldValue) {
         this.changeVdomRootKey('icon', value);
+    }
+
+    /**
+     * Triggered after the iconTrailing config got changed.
+     * @param {String} value
+     * @param {String} oldValue
+     * @protected
+     */
+    afterSetIconTrailing(value, oldValue) {
+        this.changeVdomRootKey('iconTrailing', value);
     }
 
     /**
