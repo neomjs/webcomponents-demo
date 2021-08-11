@@ -34,6 +34,10 @@ class Button extends Component {
          */
         label_: '',
         /**
+         * @member {Boolean} outlined_=false
+         */
+        outlined_: false,
+        /**
          * @member {Object} _vdom={tag:'mwc-textfield'}
          */
         _vdom:
@@ -78,6 +82,16 @@ class Button extends Component {
      */
     afterSetLabel(value, oldValue) {
         this.changeVdomRootKey('label', value);
+    }
+
+    /**
+     * Triggered after the outlined config got changed.
+     * @param {Boolean} value
+     * @param {Boolean} oldValue
+     * @protected
+     */
+    afterSetOutlined(value, oldValue) {
+        this.changeVdomRootKey('outlined', value || null);
     }
 }
 

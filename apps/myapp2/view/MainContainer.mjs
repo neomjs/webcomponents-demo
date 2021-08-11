@@ -30,23 +30,44 @@ class MainContainer extends Viewport {
                 },
 
                 items: [{
-                    style: null
+
                 }, {
                     icon: 'event'
                 }, {
-                    label : 'raised',
-                    raised: true
+                    iconTrailing: 'delete'
                 }, {
-                    label     : 'unelevated',
-                    unelevated: true
-                }, {
-                    dense: true,
-                    label: 'dense'
+                    helper: 'Helper Text'
                 }],
 
                 tabButtonConfig: {
                     iconCls: 'fa fa-home',
-                    text   : 'Tab 1'
+                    text   : 'Filled'
+                }
+            }, {
+                ntype : 'container',
+                layout: {ntype: 'vbox', align: 'start'},
+                style : {margin: '1em'},
+
+                itemDefaults: {
+                    module  : MwcTextField,
+                    label   : 'My Textfield',
+                    outlined: true,
+                    style   : {marginTop: '1em'}
+                },
+
+                items: [{
+
+                }, {
+                    icon: 'event'
+                }, {
+                    iconTrailing: 'delete'
+                }, {
+                    helper: 'Helper Text'
+                }],
+
+                tabButtonConfig: {
+                    iconCls: 'fa fa-play-circle',
+                    text   : 'Outlined'
                 }
             }]
         }]
