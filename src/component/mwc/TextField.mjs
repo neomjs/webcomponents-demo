@@ -17,6 +17,10 @@ class Button extends Component {
          */
         ntype: 'mwc-textfield',
         /**
+         * @member {String} icon_=''
+         */
+        icon_: '',
+        /**
          * @member {String} label_=''
          */
         label_: '',
@@ -26,6 +30,16 @@ class Button extends Component {
         _vdom:
             {tag: 'mwc-textfield'}
     }}
+
+    /**
+     * Triggered after the icon config got changed.
+     * @param {String} value
+     * @param {String} oldValue
+     * @protected
+     */
+    afterSetIcon(value, oldValue) {
+        this.changeVdomRootKey('icon', value);
+    }
 
     /**
      * Triggered after the label config got changed.

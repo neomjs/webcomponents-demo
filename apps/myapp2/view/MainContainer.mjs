@@ -25,15 +25,14 @@ class MainContainer extends Viewport {
 
                 itemDefaults: {
                     module: MwcTextField,
+                    label : 'My Textfield',
                     style : {marginTop: '1em'}
                 },
 
                 items: [{
-                    label: 'standard',
                     style: null
                 }, {
-                    label   : 'outlined',
-                    outlined: true
+                    icon: 'event'
                 }, {
                     label : 'raised',
                     raised: true
