@@ -1,6 +1,6 @@
 {
     "name": "neo-webcomponents-demo",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "repository": {
         "type": "git",
         "url": "https://github.com/neomjs/webcomponents-demo.git"
@@ -21,6 +21,6 @@
     "license": "MIT",
     "dependencies": {
         "fs-extra": "^10.0.0",
-        "neo.mjs": "^2.3.2"
+        "neo.mjs": "^3.0.0"
     }
 }
